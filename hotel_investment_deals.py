@@ -2,10 +2,10 @@ import pandas as pd
 import requests
 import os
 
-excel_file = "Deals.xlsx"
-df = pd.read_excel(excel_file)
+#excel_file = "Deals_New.xlsx"
+#df = pd.read_excel(excel_file)
 
-download_dir = "Hotel_Deals"
+download_dir = "Deals_downloads"
 
 if not os.path.exists(download_dir):
     os.makedirs(download_dir)
@@ -42,4 +42,4 @@ def join_excel_files():
     combined_df.to_excel("Master_Excel_deals.xlsx", index=False)
 
 #download_file()
-#join_excel_files()
+join_excel_files()
