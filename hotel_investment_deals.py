@@ -20,7 +20,7 @@ def download_file():
         if response.status_code == 200:
             with open(os.path.join(download_dir, filename), 'wb') as f:
                 f.write(response.content)
-            print(f"Download success, file: {filename}")
+                print(f"Download success, file: {filename}")
         else:
             print(f"Unable to download, file: {filename}")
 
@@ -39,7 +39,7 @@ def join_excel_files():
             print(f"Error reading {file}: {str(e)}")
 
     combined_df = pd.concat(dfs, ignore_index=True)
-    combined_df.to_excel("Master_Excel_deals", index=False)
+    combined_df.to_excel("Master_Excel_deals.xlsx", index=False)
 
 #download_file()
-join_excel_files()
+#join_excel_files()
