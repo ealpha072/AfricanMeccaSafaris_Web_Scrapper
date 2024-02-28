@@ -43,3 +43,11 @@ def join_excel_files():
 
 #download_file()
 join_excel_files()
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python hotel_investment_deals.py")
+        sys.exit(1)
+
+    input_argument = sys.argv[1]
+
